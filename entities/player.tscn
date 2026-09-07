@@ -1,40 +1,47 @@
 [gd_scene format=3 uid="uid://doc61wlw1ucb7"]
 
 [ext_resource type="Script" uid="uid://ct02bt4wlylu4" path="res://scripts/player.gd" id="1_merdl"]
-[ext_resource type="Texture2D" uid="uid://ddvhk2opju4sv" path="res://sprites/bob/Sprite-0005.png" id="2_b0kkn"]
+[ext_resource type="Texture2D" uid="uid://b3cu4stj5w7hf" path="res://sprites/black blob/Sprite-0001.png" id="2_b0kkn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_db2vd"]
-size = Vector2(17, 58)
+size = Vector2(12, 15)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e4p34"]
 atlas = ExtResource("2_b0kkn")
-region = Rect2(0, 0, 43, 64)
+region = Rect2(29, 11, 25, 21)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rfe5m"]
 atlas = ExtResource("2_b0kkn")
-region = Rect2(141, 0, 43, 64)
+region = Rect2(58, 11, 25, 21)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qly61"]
 atlas = ExtResource("2_b0kkn")
-region = Rect2(94, 0, 43, 64)
+region = Rect2(145, 11, 25, 21)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qsoyl"]
 atlas = ExtResource("2_b0kkn")
-region = Rect2(47, 0, 43, 64)
+region = Rect2(87, 11, 25, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nm46"]
+atlas = ExtResource("2_b0kkn")
+region = Rect2(116, 11, 25, 21)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ky1m6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e4p34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfe5m")
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 5.0
+"speed": 3.5
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rfe5m")
+"texture": SubResource("AtlasTexture_qly61")
 }],
 "loop": 1,
 "name": &"jump",
@@ -42,28 +49,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qly61")
+"texture": SubResource("AtlasTexture_qsoyl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qsoyl")
+"texture": SubResource("AtlasTexture_6nm46")
 }],
 "loop": 1,
 "name": &"walk",
-"speed": 2.0
+"speed": 4.0
 }]
 
 [node name="player" type="CharacterBody2D" unique_id=1875696947]
 script = ExtResource("1_merdl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=560444668]
-position = Vector2(-0.5, 3)
+position = Vector2(-1, 2.5)
 shape = SubResource("RectangleShape2D_db2vd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1272507710]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ky1m6")
 animation = &"walk"
-frame_progress = 0.39642915
+frame_progress = 0.44878033
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1934031439]
 position = Vector2(47, 11)
