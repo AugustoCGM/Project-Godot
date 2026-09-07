@@ -49,7 +49,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [node name="player" type="CharacterBody2D" unique_id=1875696947]
@@ -62,4 +62,9 @@ shape = SubResource("RectangleShape2D_db2vd")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1272507710]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ky1m6")
-animation = &"jump"
+animation = &"walk"
+frame_progress = 0.39642915
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1934031439]
+position = Vector2(47, 11)
+limit_left = -400
