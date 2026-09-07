@@ -3,12 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://doc61wlw1ucb7" path="res://entities/player.tscn" id="1_5kiuu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ky1m6"]
-size = Vector2(150, 22.5)
+size = Vector2(1155, 122.25)
 
 [node name="Game" type="Node2D" unique_id=1955300179]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=730412197]
-position = Vector2(75, 89)
+position = Vector2(577, 586)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1423110963]
 shape = SubResource("RectangleShape2D_ky1m6")

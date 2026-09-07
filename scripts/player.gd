@@ -35,5 +35,11 @@ func _physics_process(delta: float) -> void:
 
 	else:
 		ani.play("jump")
+		if direction > 0:
+			ani.flip_h = false
+		elif direction < 0:
+			ani.flip_h = true
+		
+		
 
 	move_and_slide()
