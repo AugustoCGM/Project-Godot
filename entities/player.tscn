@@ -6,6 +6,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_db2vd"]
 size = Vector2(12, 15)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0kkn"]
+atlas = ExtResource("2_b0kkn")
+region = Rect2(174, 11, 25, 21)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_e4p34"]
 atlas = ExtResource("2_b0kkn")
 region = Rect2(29, 11, 25, 21)
@@ -28,6 +32,14 @@ region = Rect2(116, 11, 25, 21)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ky1m6"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0kkn")
+}],
+"loop": 1,
+"name": &"falling",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e4p34")
@@ -69,8 +81,7 @@ shape = SubResource("RectangleShape2D_db2vd")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1272507710]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ky1m6")
-animation = &"walk"
-frame_progress = 0.44878033
+animation = &"falling"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1934031439]
 position = Vector2(47, 11)
