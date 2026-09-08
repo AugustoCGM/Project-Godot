@@ -20,8 +20,6 @@ Implementação do player temporário (ainda um dinossauro) com estados de anima
 
 Concepts do dino: ![DINO Concepts](docs/media/imagem_dino.png)
 
-Gameplay Inicial (Caixas de colisão): <video src="docs/media/video_dia1.mp4" controls width="100%"></video>
-
 😐 Dia 2: A Chegada de Bob e a Exploração de Câmera
 O segundo dia foi de "pouco avanço" estrutural devido à mudança de direção. Para não gastar os sprites dos dinossauros e acabar criando algo reciclado, decidi trazer um personagem de outro projeto futuro do JAM labs: o Bob.
 
@@ -43,7 +41,7 @@ Concepts do Bob: ![Bob Concepts](docs/media/bob_concepts.png)
 
 Spritesheet do Bob: ![Bob Sprites](docs/media/bob_sprites.png)
 
-Gameplay com o Bob: <video src="docs/media/video_dia2.mp4" controls width="100%"></video>
+Gameplay com o Bob: ![Bob Sprites](docs/media/bob_GP.png)
 
 🟢 Dia 3: O Hamster na Bola, o Nascimento do "Blob" e Texturas
 No terceiro dia, pensei em mudar de rota novamente: imaginei um jogo sobre um hamster fugindo de casa em sua bola, focando em momentum e alta velocidade usando o terreno. Novamente, vi que o escopo e a criação de sprites fugiam da minha capacidade técnica atual.
