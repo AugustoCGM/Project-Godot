@@ -18,7 +18,7 @@ Implementação do player temporário (ainda um dinossauro) com estados de anima
 
 📸 Mídia do Dia 1
 
-Concepts do Bob: ![DINO Concepts](docs/media/imagem_dino.png)
+Concepts do dino: ![DINO Concepts](docs/media/imagem_dino.png)
 
 Gameplay Inicial (Caixas de colisão): <video src="docs/media/video_dia1.mp4" controls width="100%"></video>
 
