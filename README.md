@@ -87,7 +87,7 @@ Foco do dia:
 
 Mapa reestruturado com camadas: ![Mapa Reestruturado](docs/media/mapa_v2_camadas.png)
 
-Efeito de Parallax e Ambientação: ![Parallax e Background](docs/media/parallax_ambientacao.png)
+Camadas de Parallax, mapa e Ambientação: ![Parallax e Background](docs/media/parallax_ambientacao.png)
 
 🛠️ Tecnologias e Ferramentas
 Engine: Godot Engine
