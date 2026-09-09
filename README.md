@@ -1,9 +1,12 @@
 📝 Dev Log: Projeto Plataforma (Godot)
+
 Bem-vindo ao dev log oficial deste projeto! Este repositório documenta a jornada de desenvolvimento de um jogo de plataforma criado com o objetivo de colocar em prática os conceitos estudados na engine Godot.
 
-Nota inicial: O projeto começou de forma diferente e passou por algumas evoluções importantes de escopo e identidade visual até chegar ao estado atual. Abaixo está o registro cronológico dos primeiros 3 dias de desenvolvimento.
+Nota inicial: O projeto começou de forma diferente e passou por algumas evoluções importantes de escopo e identidade visual até chegar ao estado atual. Abaixo está o registro cronológico do desenvolvimento.
+
 
 🦖 Dia 1: O Ponto de Partida (O Incidente "Dinomorph")
+
 O projeto começou no dia 5 com a ideia inicial de criar um endless runner com dinossauros (estilo o jogo do dinossauros do Google Chrome). Cheguei a estruturar conceitos visuais e sprites iniciais para esse projeto (que se chama provisoriamente de Dinomorph e continua vivo, voltando à ativa assim que este jogo de plataforma for concluído).
 
 Como o curso que estou seguindo aborda o desenvolvimento de jogos de plataforma, decidi pivotar o foco do projeto para aplicar diretamente os novos conhecimentos.
@@ -20,10 +23,12 @@ Implementação do player temporário (ainda um dinossauro) com estados de anima
 
 Concepts do dino: ![DINO Concepts](docs/media/imagem_dino.png)
 
+
 😐 Dia 2: A Chegada de Bob e a Exploração de Câmera
+
 O segundo dia foi de "pouco avanço" estrutural devido à mudança de direção. Para não gastar os sprites dos dinossauros e acabar criando algo reciclado, decidi trazer um personagem de outro projeto futuro do JAM labs: o Bob.
 
-O Bob foi originalmente criado para ser o protagonista do Desem Forca (evolução direta e mobile do projeto anterior Em Forca, já concluído e disponível na Play Store). A ideia inicial era introduzir o humor e a falta de carisma dele aqui. Porém, como comecei a descobrir o software Aseprite, percebi que ainda não tenho técnica para animar um personagem tão detalhado.
+O Bob foi originalmente criado para ser o protagonista do Desem Forca (evolução direta e mobile do projeto anterior Em Forca, já concluído e disponível na Play Store). A ideia inicial era introduzir o humor e a falta de carisma dele aqui. Porém, com minha experiência de 1 hora de Aseprite, percebi que ainda não tenho técnica para animar um personagem tão detalhado (sei da regra de fazer funcionar primeiro e deixar bonito depois, mas definir o personagem principal do jogo é importante para saber como o jogo deve se comportar e eu não garanto que eu vá conseguir aprender a fazer bons sprites até o final do desenvolvimento, até pq, esse não é o foco do projeto).
 
 Ainda assim, criei os sprites de Standing, Walking e Jumping para ele (que ficaram até que legais, eu acho).
 
@@ -62,7 +67,7 @@ Primeira aplicação de texturas no mapa.
 
 Sprites do novo personagem (Blob): ![Blob Sprites](docs/media/blob_sprites.png)
 
-Gameplay atual com mapa texturizado: <video src="docs/media/video_dia3.mp4" controls width="100%"></video>
+Primeira versão do terreno de testes: ![Blob Sprites](docs/media/betaterrainV1.png)
 
 🛠️ Tecnologias e Ferramentas
 Engine: Godot Engine
