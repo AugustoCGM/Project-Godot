@@ -69,6 +69,26 @@ Sprites do novo personagem (Blob): ![Blob Sprites](docs/media/blob_sprites.png)
 
 Primeira versão do terreno de testes: ![Blob Sprites](docs/media/betaterrainV1.png)
 
+
+🌄 Dia 4: Ambientação, Camadas e o Efeito Parallax
+
+O quarto dia foi focado 100% em ambientação e em entender como estruturar um mapa de verdade. Percebi rápido que, para um jogo de plataforma focado em exploração (que é o caminho que quero seguir com esse projeto ainda sem nome), dividir o mapa em camadas não é só capricho, é essencial. 
+
+Também assimilei bem melhor a lógica de tilesets, a importância de separar tiles em objetos específicos e como organizar tudo isso de forma limpa na Godot. Com isso, resolvi reestruturar o mapa todo: mantive o mesmo layout que já tinha gostado, mas refiz do zero aplicando camadas organizadas, refinando as hitboxes de colisão, adicionando detalhes de cenário para dar mais vida e seguindo boas práticas de level design. 
+
+Para fechar o dia com chave de ouro, implementei um background definitivo e configurei o efeito de Parallax, aplicando diferentes intensidades de movimento de acordo com a profundidade e distância de cada camada. A sensação de profundidade mudou completamente o jogo! (mas definitivamente, minhas tecnicas com o paralax ainda tem muito a melhorar)
+
+Foco do dia:
+* Estudo prático de Tilemaps, divisão de objetos em tiles e organização em camadas (layers).
+* Reestruturação completa do mapa de testes mantendo o layout, mas com hitboxes refinadas e detalhes de ambientação.
+* Implementação de background com Parallax em múltiplas velocidades para criar sensação real de profundidade.
+
+📸 Mídia do Dia 4
+
+Mapa reestruturado com camadas: ![Mapa Reestruturado](docs/media/mapa_v2_camadas.png)
+
+Efeito de Parallax e Ambientação: ![Parallax e Background](docs/media/parallax_ambientacao.png)
+
 🛠️ Tecnologias e Ferramentas
 Engine: Godot Engine
 
