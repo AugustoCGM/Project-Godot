@@ -217,7 +217,7 @@ motion_scale = Vector2(0.2, 0)
 motion_mirroring = Vector2(708, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Cloud" unique_id=1970943727]
-position = Vector2(354.34378, 178.625)
+position = Vector2(363, 179)
 scale = Vector2(2.4628906, 1.6983173)
 texture = ExtResource("7_qpk70")
 
@@ -235,7 +235,7 @@ motion_scale = Vector2(0.4, 0)
 motion_mirroring = Vector2(708, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Hills" unique_id=1068076018]
-position = Vector2(354.34378, 178.625)
+position = Vector2(352, 199)
 scale = Vector2(2.4628906, 1.6983173)
 texture = ExtResource("9_17rxn")
 
@@ -244,6 +244,9 @@ motion_scale = Vector2(0.5, 0)
 motion_mirroring = Vector2(708, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Florest" unique_id=583361101]
-position = Vector2(327, 157)
-scale = Vector2(2.4628906, 2.2836537)
+texture_repeat = 2
+position = Vector2(510, 247.99998)
+scale = Vector2(0.9447293, 1.0348557)
 texture = ExtResource("10_yq8tf")
+region_enabled = true
+region_rect = Rect2(0, 0, 1152, 208)
