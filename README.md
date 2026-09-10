@@ -29,7 +29,7 @@ Apesar de não focar na publicação por agora, o projeto será feito com total 
 
 ---
 
-## <img src="docs/media/dino_icon.png" width="32" align="absmiddle"> Dia 1: O Ponto de Partida (O Incidente "Dinomorph")
+🦖 Dia 1: O Ponto de Partida (O Incidente "Dinomorph")
 
 O projeto começou no dia 5 de setembro de 2026 com a ideia inicial de criar um endless runner com dinossauros (estilo o jogo do dinossauros do Google Chrome). Cheguei a estruturar conceitos visuais e sprites iniciais para esse projeto (que se chama provisoriamente de Dinomorph e continua vivo, voltando à ativa assim que este jogo de plataforma for concluído).
 
@@ -47,7 +47,7 @@ Como o curso que estou seguindo aborda o desenvolvimento de jogos de plataforma,
 
 ---
 
-## <img src="docs/media/bob_icon.png" width="32" align="absmiddle"> Dia 2: A Chegada de Bob e a Exploração de Câmera
+🎥 Dia 2: A Chegada de Bob e a Exploração de Câmera
 
 O segundo dia foi de "pouco avanço" estrutural devido à mudança de direção. Para não gastar os sprites dos dinossauros e acabar criando algo reciclado, decidi trazer um personagem de outro projeto futuro do JAM labs: o Bob.
 
@@ -67,7 +67,7 @@ Ainda assim, criei os sprites de Standing, Walking e Jumping para ele (que ficar
 
 ---
 
-## <img src="docs/media/blob_icon.png" width="32" align="absmiddle"> Dia 3: O Hamster na Bola, o Nascimento do "Blob" e Texturas
+🐹 Dia 3: O Hamster na Bola, o Nascimento do "Blob" e Texturas
 
 No terceiro dia, pensei em mudar de rota novamente: imaginei um jogo sobre um hamster fugindo de casa em sua bola, focando em momentum e alta velocidade usando o terreno. Novamente, vi que o escopo e a criação de sprites fugiam da minha capacidade técnica atual.
 
@@ -85,7 +85,7 @@ Explorando minha galeria de concepts antigos (inclusive ideias descartadas duran
 
 ---
 
-## <img src="docs/media/sol_icon.png" width="32" align="absmiddle"> Dia 4: Ambientação, Camadas e o Efeito Parallax
+🌄 Dia 4: Ambientação, Camadas e o Efeito Parallax
 
 O quarto dia foi focado 100% em ambientação e em entender como estruturar um mapa de verdade. Percebi rápido que, para um jogo de plataforma focado em exploração (que é o caminho que quero seguir com esse projeto ainda sem nome), dividir o mapa em camadas não é só capricho, é essencial.
 
@@ -104,7 +104,7 @@ Para fechar o dia com chave de ouro, implementei um background definitivo e conf
 
 ---
 
-## <img src="docs/media/mar_icon.gif" width="32" align="absmiddle"> Dia 5: Pouco Tempo, Nova Cena e Água Animada
+🌊 Dia 5: Pouco Tempo, Nova Cena e Água Animada
 
 O quinto dia acabou sendo mais enxuto por pura falta de tempo, mas ainda assim deu para aprender algo muito massa. Como o tempo de tela foi curto, o foco acabou sendo bem cirúrgico: entender como funciona a animação de tiles na Godot.
 
