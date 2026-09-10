@@ -32,7 +32,7 @@ Como o curso que estou seguindo aborda o desenvolvimento de jogos de plataforma,
 * Implementação do player temporário (ainda um dinossauro) com estados de animação para Static, Walking e Jumping.
 
 ### 📸 Mídia do Dia 1
-* **Concepts do dino:** `![DINO Concepts](docs/media/imagem_dino.png)`
+* **Concepts do dino:** ![DINO Concepts](docs/media/imagem_dino.png)
 
 ---
 
@@ -50,9 +50,9 @@ Ainda assim, criei os sprites de Standing, Walking e Jumping para ele (que ficar
 * Implementação do sistema de câmera centralizada com efeito smooth.
 
 ### 📸 Mídia do Dia 2
-* **Concepts do Bob:** `![Bob Concepts](docs/media/bob_concepts.png)`
-* **Spritesheet do Bob:** `![Bob Sprites](docs/media/bob_sprites.png)`
-* **Gameplay com o Bob:** `![Bob Sprites](docs/media/bob_GP.png)`
+* **Concepts do Bob:** ![Bob Concepts](docs/media/bob_concepts.png)
+* **Spritesheet do Bob:** ![Bob Sprites](docs/media/bob_sprites.png)
+* **Gameplay com o Bob:** ![Bob Sprites](docs/media/bob_GP.png)
 
 ---
 
@@ -69,8 +69,8 @@ Explorando minha galeria de concepts antigos (inclusive ideias descartadas duran
 * Primeira aplicação de texturas no mapa.
 
 ### 📸 Mídia do Dia 3
-* **Sprites do novo personagem (Blob):** `![Blob Sprites](docs/media/blob_sprites.png)`
-* **Primeira versão do terreno de testes:** `![Blob Sprites](docs/media/betaterrainV1.png)`
+* **Sprites do novo personagem (Blob):** ![Blob Sprites](docs/media/blob_sprites.png)
+* **Primeira versão do terreno de testes:** ![Blob Sprites](docs/media/betaterrainV1.png)
 
 ---
 
@@ -88,8 +88,8 @@ Para fechar o dia com chave de ouro, implementei um background definitivo e conf
 * Implementação de background com Parallax em múltiplas velocidades para criar sensação real de profundidade.
 
 ### 📸 Mídia do Dia 4
-* **Mapa reestruturado com camadas:** `![Mapa Reestruturado](docs/media/mapa_v2_camadas.png)`
-* **Camadas de Parallax, mapa e Ambientação:** `![Parallax e Background](docs/media/parallax_ambientacao.png)`
+* **Mapa reestruturado com camadas:** ![Mapa Reestruturado](docs/media/mapa_v2_camadas.png)
+* **Camadas de Parallax, mapa e Ambientação:** ![Parallax e Background](docs/media/parallax_ambientacao.png)
 
 ---
 
@@ -105,7 +105,7 @@ Comecei montando uma nova cena de testes bem rápida para não bagunçar o mapa 
 * Adição de água animada ao cenário.
 
 ### 📸 Mídia do Dia 5
-* **Nova cena de testes e Água animada:** `![Agua Animada](docs/media/agua_animada.gif)`
+* **Nova cena de testes e Água animada:** ![Agua Animada](docs/media/agua_animada.gif)
 
 ---
 
