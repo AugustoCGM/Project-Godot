@@ -89,7 +89,26 @@ Mapa reestruturado com camadas: ![Mapa Reestruturado](docs/media/mapa_v2_camadas
 
 Camadas de Parallax, mapa e Ambientação: ![Parallax e Background](docs/media/parallax_ambientacao.png)
 
+
+🌊 Dia 5: Pouco Tempo, Nova Cena e Água Animada
+
+O quinto dia acabou sendo mais enxuto por pura falta de tempo, mas ainda assim deu para aprender algo muito massa. Como o tempo de tela foi curto, o foco acabou sendo bem cirúrgico: entender como funciona a animação de tiles na Godot.
+
+Comecei montando uma nova cena de testes bem rápida para não bagunçar o mapa anterior. Depois de apanhar um pouquinho para pegar a lógica (e tentar relembrar tudo que eu tinha aprendido nos dias anteriores), consegui criar os frames e aplicar animação para a água do cenário. Mesmo parecendo um detalhe pequeno, foi bacaninha aprender a animar isso (Quero tentar fazer isso para simular uns efeitos de vento nas plantas e tal) e acho que fecha bem os estudos com tilesets animados.
+
+Foco do dia:
+* Criação de uma nova cena de testes ágil para prototipagem rápida.
+* Estudo e implementação de animação de tiles dentro do TileMap.
+* Adição de água animada ao cenário.
+
+📸 Mídia do Dia 5
+
+
+Nova cena de testes e Água animada: ![Agua Animada](docs/media/agua_animada.gif)
+
+
 🛠️ Tecnologias e Ferramentas
+
 Engine: Godot Engine
 
 Arte / Animação: Aseprite
