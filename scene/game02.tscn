@@ -398,6 +398,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 900, 208)
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="Node2D/ParallaxBackground" unique_id=2020505053]
+z_index = -3
 texture_repeat = 2
 motion_scale = Vector2(0.2, 0)
 motion_mirroring = Vector2(288, 0)
