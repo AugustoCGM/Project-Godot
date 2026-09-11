@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://cim73km7binsa"]
+
+[ext_resource type="Script" uid="uid://bql2holtjpjr0" path="res://scripts/portal.gd" id="1_eay2k"]
+[ext_resource type="Texture2D" uid="uid://b7u7hm1522xuy" path="res://sprites/portal/portal-sheet.png" id="1_g0q8t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eay2k"]
+atlas = ExtResource("1_g0q8t")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5oi1"]
+atlas = ExtResource("1_g0q8t")
+region = Rect2(40, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oacwj"]
+atlas = ExtResource("1_g0q8t")
+region = Rect2(80, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apoci"]
+atlas = ExtResource("1_g0q8t")
+region = Rect2(120, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhodr"]
+atlas = ExtResource("1_g0q8t")
+region = Rect2(160, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufa7d"]
+atlas = ExtResource("1_g0q8t")
+region = Rect2(200, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pj6b"]
+atlas = ExtResource("1_g0q8t")
+region = Rect2(240, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5t1b"]
+atlas = ExtResource("1_g0q8t")
+region = Rect2(280, 0, 40, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ky1m6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eay2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5oi1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oacwj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apoci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhodr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufa7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pj6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5t1b")
+}],
+"loop": 1,
+"name": &"portal",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ky1m6"]
+radius = 15.297058
+
+[node name="Portal" type="Area2D" unique_id=2135351409]
+collision_layer = 4
+script = ExtResource("1_eay2k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1728651682]
+sprite_frames = SubResource("SpriteFrames_ky1m6")
+animation = &"portal"
+autoplay = "portal"
+frame_progress = 0.03977
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1406316022]
+shape = SubResource("CircleShape2D_ky1m6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

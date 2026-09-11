@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=288
+window/size/viewport_width=280
 window/size/viewport_height=208
 window/stretch/mode="viewport"
 
@@ -43,6 +43,12 @@ jump={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+
+[layer_names]
+
+2d_physics/layer_1="terreno"
+2d_physics/layer_2="player"
+2d_physics/layer_3="portal"
 
 [physics]
 
