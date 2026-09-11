@@ -84,10 +84,3 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ky1m6")
 animation = &"walk"
 frame_progress = 0.27319142
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1934031439]
-position = Vector2(185, -13)
-limit_left = -32
-limit_top = -9999923
-limit_right = 9999971
-limit_bottom = 10000077

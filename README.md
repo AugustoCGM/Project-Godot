@@ -120,6 +120,25 @@ Comecei montando uma nova cena de testes bem rápida para não bagunçar o mapa 
 
 ---
 
+🎮 Dia 6: Suporte a Controles, Background Animado e a Batalha do Parallax
+
+No sexto dia, configurei o mapeamento de inputs para controles de console. Agora, as ações do player (que por enquanto continuam focadas no essencial: andar e pular) já respondem liso tanto no teclado quanto no controle. 
+
+Também aprendendi a fazer animação de cenário diretamente no background e montei uma nova cena para testar tudo. Por outro lado, o dia foi marcado por uma dor de cabeça que vem me perseguindo: o ajuste fino dos backgrounds. 
+
+Está sendo a minha maior dificuldade no projeto. Nunca consigo acertar de primeira e deixar tudo 100% polido. Sempre que tento alinhar o BG dos três mapas criados até agora, acabo tendo que apelar para gambiarras, esticar sprites e caçar resoluções no improviso. Mesmo assim, sinto que o enquadramento ou o efeito de parallax ficam ligeiramente desalinhados. É um ponto fraco que com certeza vou precisar parar para estudar com mais calma nos próximos dias.
+
+Foco do dia:
+* Implementação do suporte e mapeamento de inputs para controles de console.
+* Estudo de técnicas de animação diretamente no cenário (background).
+* Criação de uma nova cena de testes.
+
+📸 Mídia do Dia 6
+* **Novo cenário com background animado:** ![Cenário Animado](docs/media/dia6_bg_animado.gif)
+* **Teste com controle:** ![Gameplay Controle](docs/media/dia6_gameplay_controle.gif)
+
+---
+
 ## 🛠️ Tecnologias e Ferramentas
 * **Engine:** Godot Engine
 * **Arte / Animação:** Aseprite
