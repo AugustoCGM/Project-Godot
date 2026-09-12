@@ -26,6 +26,7 @@ Apesar de não focar na publicação por agora, o projeto será feito com total 
 * [Dia 4: Ambientação, Camadas e o Efeito Parallax](#-dia-4-ambientação-camadas-e-o-efeito-parallax)
 * [Dia 5: Pouco Tempo, Nova Cena e Água Animada](#-dia-5-pouco-tempo-nova-cena-e-água-animada)
 * [Dia 6: Suporte a Controles, Background Animado e a Batalha do Parallax](#-dia-6-suporte-a-controles-background-animado-e-a-batalha-do-parallax)
+* [Dia 7: Câmera Desacoplada, Portais e Transição de Fases](#-dia-7-câmera-desacoplada-portais-e-transição-de-fases)
 * [Tecnologias e Ferramentas](#%EF%B8%8F-tecnologias-e-ferramentas)
 
 ---
@@ -137,6 +138,28 @@ Foco do dia:
 📸 Mídia do Dia 6
 * **Novo cenário com background animado:** ![Cenário Animado](docs/media/dia6_bg_animado.gif)
 * **Teste com controle:** ![Gameplay Controle](docs/media/dia6_gameplay_controle.gif)
+
+---
+
+🌀 Dia 7: Câmera Desacoplada, Portais e Transição de Fases
+
+O sétimo dia foi focado em refatoração e preparação de sistemas importantes para a progressão do jogo. 
+
+Comecei o dia reformulando completamente o sistema de câmera. No início, ela era apenas um nó filho do jogador, então entrava em cena e o seguia de forma automática sempre que o player era instanciado no cenário. No geral isso funciona bem para testes rápidos, mas percebi que iria me limitar ou complicar a vida mais à frente caso eu precisasse, por exemplo, focar a câmera em outros pontos ou objetos durante eventos específicos da gameplay. 
+
+Para resolver isso, desacoplei tudo: criei uma nova cena exclusiva para a câmera e a configurei como uma entidade própria. Agora ela possui comportamento independente e segue o jogador via script. Feito isso, importei a câmera nos 3 cenários e fiz os ajustes finos para que ela performe da melhor forma em cada mapa.
+
+Depois, comecei a trabalhar no sistema de troca de fases. Para deixar a transição visualmente clara e intuitiva, desenhei um sprite animado no Aseprite e estruturei o portal em uma cena própria na Godot — configurando suas animações e scripts de comportamento. Aproveitei esse momento para me aprofundar em conceitos fundamentais da engine: passei a explorar melhor as tags/grupos, configurei as collision layers e collision masks com mais precisão e comecei a utilizar sinais (signals) para disparar eventos de forma limpa. Por fim, posicionei e "escondi" o portal pelos 3 mapas já criados para começar a amarrar a exploração entre as fases.
+
+Foco do dia:
+* Refatoração e desacoplamento da câmera, transformando-a em uma cena/entidade independente com perseguição via script.
+* Ajustes e calibração da nova câmera nos 3 cenários existentes.
+* Criação dos sprites e animações do portal no Aseprite.
+* Estudo e aplicação de Collision Layers/Masks, tags/grupos e sinais (signals) na Godot.
+* Configuração da cena do portal e posicionamento pelos mapas para estruturar a transição entre fases.
+
+📸 Mídia do Dia 7
+* **Animação do portal no cenário:** ![Portal Animado](docs/media/dia7_portal_animado.gif)
 
 ---
 

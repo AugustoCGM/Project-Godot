@@ -397,7 +397,6 @@ region_rect = Rect2(0, 0, 1152, 208)
 limit_left = -30
 limit_right = 750
 limit_bottom = 400
-position_smoothing_enabled = false
 
 [node name="Node2D" parent="." unique_id=995919750 instance=ExtResource("13_5g16k")]
 position = Vector2(679, 47)
