@@ -282,5 +282,6 @@ flip_v = true
 [node name="Camera" parent="." unique_id=409881069 instance=ExtResource("11_va4de")]
 limit_bottom = 308
 
-[node name="Node2D" parent="Camera" unique_id=2135351409 instance=ExtResource("12_e0amn")]
-position = Vector2(295, -84)
+[node name="Node2D" parent="." unique_id=2135351409 instance=ExtResource("12_e0amn")]
+position = Vector2(304, -79)
+next_level = "game"

@@ -414,5 +414,6 @@ texture = ExtResource("10_tmmao")
 limit_left = -34
 limit_bottom = 311
 
-[node name="Node2D" parent="Camera" unique_id=2135351409 instance=ExtResource("12_c2dek")]
-position = Vector2(1034, 252)
+[node name="Node2D2" parent="." unique_id=2135351409 instance=ExtResource("12_c2dek")]
+position = Vector2(1026, 249)
+next_level = "game03"

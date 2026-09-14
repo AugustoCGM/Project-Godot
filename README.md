@@ -20,7 +20,7 @@ Apesar de não focar na publicação por agora, o projeto será feito com total 
 
 ## 🗂️ Índice
 * [Introdução e Objetivos](#-introdução-e-objetivos)
-* [Dia 1: O Ponto de Partida (O Incidente "Dinomorph")](#-dia-1-o-ponto-de-partida-o-incidente-dinomorph)
+* [Dia 1: O Ponto de Partida (O Incidente "Morphossaur")](#-dia-1-o-ponto-de-partida-o-incidente-morphossaur)
 * [Dia 2: A Chegada de Bob e a Exploração de Câmera](#-dia-2-a-chegada-de-bob-e-a-exploração-de-câmera)
 * [Dia 3: O Hamster na Bola, o Nascimento do "Blob" e Texturas](#-dia-3-o-hamster-na-bola-o-nascimento-do-blob-e-texturas)
 * [Dia 4: Ambientação, Camadas e o Efeito Parallax](#-dia-4-ambientação-camadas-e-o-efeito-parallax)
@@ -28,12 +28,13 @@ Apesar de não focar na publicação por agora, o projeto será feito com total 
 * [Dia 6: Suporte a Controles, Background Animado e a Batalha do Parallax](#-dia-6-suporte-a-controles-background-animado-e-a-batalha-do-parallax)
 * [Dia 7: Câmera Desacoplada, Portais e Transição de Fases](#-dia-7-câmera-desacoplada-portais-e-transição-de-fases)
 * [Tecnologias e Ferramentas](#%EF%B8%8F-tecnologias-e-ferramentas)
+* [Dia 8: Transição de Fases Totalmente Funcional](#-dia-8-transição-de-fases-totalmente-funcional)
 
 ---
 
-🦖 Dia 1: O Ponto de Partida (O Incidente "Dinomorph")
+🦖 Dia 1: O Ponto de Partida (O Incidente "Morphossaur")
 
-O projeto começou no dia 5 de setembro de 2026 com a ideia inicial de criar um endless runner com dinossauros (estilo o jogo do dinossauros do Google Chrome). Cheguei a estruturar conceitos visuais e sprites iniciais para esse projeto (que se chama provisoriamente de Dinomorph e continua vivo, voltando à ativa assim que este jogo de plataforma for concluído).
+O projeto começou no dia 5 de setembro de 2026 com a ideia inicial de criar um endless runner com dinossauros (estilo o jogo do dinossauros do Google Chrome). Cheguei a estruturar conceitos visuais e sprites iniciais para esse projeto (que se chama provisoriamente de Morphossaur e continua vivo, voltando à ativa assim que este jogo de plataforma for concluído).
 
 Como o curso que estou seguindo aborda o desenvolvimento de jogos de plataforma, decidi pivotar o foco do projeto para aplicar diretamente os novos conhecimentos.
 
@@ -160,6 +161,22 @@ Foco do dia:
 
 📸 Mídia do Dia 7
 * **Animação do portal no cenário:** ![Portal Animado](docs/media/dia7_portal_animado.gif)
+
+---
+
+🚪 Dia 8: Transição de Fases Totalmente Funcional
+
+No oitavo dia, o tempo disponível foi curto e os avanços foram pontuais, mas o que deu para implementar é essencial para a estrutura de qualquer jogo de plataforma: o sistema de troca de fases está oficialmente funcional!
+
+Aproveitei a cena do portal criada no dia anterior e configurei a lógica para disparar a troca de mapa assim que o jogador entra na área. A solução ficou bem simples e modular: usei uma variável dinâmica exportada diretamente no nó, o que permite definir individualmente para qual fase o portal vai levar sem precisar criar um script diferente para cada cenário. É uma mecânica muito interessante, direta ao ponto e que já abriu minha mente para novas ideias de como estruturar a progressão de fases de um jeito ainda mais criativo no *Morphossaur*.
+
+Foco do dia:
+* Implementação da lógica de transição entre cenas ao colidir com o portal.
+* Uso de variáveis dinâmicas exportadas no Inspector para tornar o portal reutilizável em qualquer fase.
+* Validação do fluxo de navegação entre os mapas do projeto.
+
+📸 Mídia do Dia 8
+* **Transição entre fases em tempo real:** ![Transição de Fases](docs/media/dia8_troca_fases.gif)
 
 ---
 
