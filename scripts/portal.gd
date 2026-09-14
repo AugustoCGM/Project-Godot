@@ -2,5 +2,4 @@ extends Area2D
 
 
 func _on_body_entered(body: Node2D) -> void:
-	print("Passou de fase")
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scene/game03.tscn")

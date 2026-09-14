@@ -72,6 +72,7 @@ radius = 15.297058
 
 [node name="Portal" type="Area2D" unique_id=2135351409]
 collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_eay2k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1728651682]
