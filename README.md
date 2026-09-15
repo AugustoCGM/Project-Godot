@@ -168,6 +168,28 @@ Para resolver isso, desacoplei tudo: criei uma nova cena exclusiva para a câmer
 
 Depois, comecei a trabalhar no sistema de troca de fases. Para deixar a transição visualmente clara e intuitiva, desenhei um sprite animado no Aseprite e estruturei o portal em uma cena própria na Godot — configurando suas animações e scripts de comportamento. Aproveitei esse momento para me aprofundar em conceitos fundamentais da engine: passei a explorar melhor as tags/grupos, configurei as collision layers e collision masks com mais precisão e comecei a utilizar sinais (signals) para disparar eventos de forma limpa. Por fim, posicionei e "escondi" o portal pelos 3 mapas já criados para começar a amarrar a exploração entre as fases.
 
+✨ Dia 8: Polimento Visual e Animação de Spawn do Jogador
+
+No nono dia, resolvi fazer uma pequena pausa no cronograma das aulas para focar em experiência de usuário (UX) e polimento visual. A troca de mapas já estava funcionando, mas a transição parecia muito abrupta: o jogador simplesmente "surgia" do nada na nova cena.
+
+Para resolver isso, criei uma animação de abertura para o portal no início de cada fase. Estruturei um script próprio para essa transição com uma lógica bem amarrada:
+1. O portal busca o jogador na cena utilizando o grupo **"Player"**.
+2. Ao encontrá-lo, posiciona o personagem exatamente no centro da abertura.
+3. Esconde o sprite do jogador e desativa temporariamente seus controles, movimento e gravidade.
+4. Executa a animação de surgimento e, assim que ela termina, revela o player e reativa toda a sua física.
+5. Caso a fase não possua um nó do tipo jogador, o script dispara um alerta de erro amigável no console.
+
+O resultado deixou a entrada nas fases muito mais fluida e profissional!
+
+**Foco do dia:**
+* Criação da animação e feedback visual de "spawn" (nascimento) do jogador no portal.
+* Manipulação temporária de estados do player (invisibilidade e bloqueio de física/inputs) durante cutscenes curtas.
+* Busca e validação dinâmica de nós na cena via Grupos/Tags (`"Player"`).
+* Tratamento de exceções e erros no console caso o player não seja encontrado.
+
+### 📸 Mídia do Dia 9
+<img src="docs/media/dia9_animacao_spawn.gif" width="100%" alt="Animação de Entrada do Player">
+
 **Foco do dia:**
 * Refatoração e desacoplamento da câmera, transformando-a em uma cena/entidade independente com perseguição via script.
 * Ajustes e calibração da nova câmera nos 3 cenários existentes.
