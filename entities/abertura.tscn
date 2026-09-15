@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://u4luxpdw0ntp"]
 
 [ext_resource type="Texture2D" uid="uid://d226i5tk2knx7" path="res://sprites/portal/portal.png" id="1_02loy"]
+[ext_resource type="Script" uid="uid://bpd13w8n3o5et" path="res://entities/abertura.gd" id="1_k1vhr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_02loy"]
 atlas = ExtResource("1_02loy")
@@ -178,7 +179,8 @@ animations = [{
 "speed": 11.0
 }]
 
-[node name="Area2D" type="Area2D" unique_id=1809306188]
+[node name="abertura" type="Area2D" unique_id=1809306188]
+script = ExtResource("1_k1vhr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=967137427]
 sprite_frames = SubResource("SpriteFrames_ldw1o")

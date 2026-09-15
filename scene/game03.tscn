@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dnrn8gvvl8sdy" path="res://sprites/mapas/Seasonal Tilesets/Seasonal Tilesets/3 - Tropics/Background parts/1 - Waters_version_1.png" id="10_va4de"]
 [ext_resource type="PackedScene" uid="uid://chotr1c56af2i" path="res://entities/camera.tscn" id="11_va4de"]
 [ext_resource type="PackedScene" uid="uid://cim73km7binsa" path="res://entities/portal.tscn" id="12_e0amn"]
+[ext_resource type="PackedScene" uid="uid://u4luxpdw0ntp" path="res://entities/abertura.tscn" id="13_u2dl8"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_ya5ci"]
 tile_data = PackedInt32Array(0, 589824, 3, 1, 655360, 3, 2, 786432, 3, 3, 851968, 3)
@@ -201,7 +202,7 @@ animations = [{
 [node name="Node2D" type="Node2D" unique_id=1956003689]
 
 [node name="player" parent="." unique_id=1875696947 instance=ExtResource("1_3bsni")]
-position = Vector2(24, 278)
+position = Vector2(28, 215)
 
 [node name="Mapa" type="Node2D" parent="." unique_id=219236770]
 
@@ -285,3 +286,6 @@ limit_bottom = 308
 [node name="Node2D" parent="." unique_id=2135351409 instance=ExtResource("12_e0amn")]
 position = Vector2(304, -79)
 next_level = "game"
+
+[node name="Area2D" parent="." unique_id=1809306188 instance=ExtResource("13_u2dl8")]
+position = Vector2(27, 216)

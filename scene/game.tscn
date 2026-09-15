@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dtvyepwed1exg" path="res://sprites/mapas/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="10_yq8tf"]
 [ext_resource type="PackedScene" uid="uid://chotr1c56af2i" path="res://entities/camera.tscn" id="12_sng2h"]
 [ext_resource type="PackedScene" uid="uid://cim73km7binsa" path="res://entities/portal.tscn" id="13_5g16k"]
+[ext_resource type="PackedScene" uid="uid://u4luxpdw0ntp" path="res://entities/abertura.tscn" id="14_81276"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_xlg7c"]
 tile_data = PackedInt32Array(0, 65536, 3, 65536, 196608, 2, 131072, 196608, 2, 196608, 196608, 2, 262144, 65536, 4, 1, 262144, 1, 65537, 262144, 4, 131073, 262144, 8, 196609, 262144, 4, 262145, 196608, 4, 327681, 65536, 4, 2, 262144, 1, 65538, 262144, 4, 131074, 262144, 8, 196610, 262144, 4, 262146, 262144, 4, 327682, 196608, 4, 393218, 65536, 4, 3, 262144, 1, 65539, 327680, 3, 131075, 262144, 4, 196611, 262144, 8, 262147, 262144, 4, 327683, 262144, 4, 393219, 262144, 6, 4, 458752, 3, 65540, 262144, 1, 131076, 262144, 4, 196612, 262144, 4, 262148, 262144, 4, 327684, 262144, 4, 393220, 196608, 4, 458756, 65536, 4, 65541, 458752, 3, 131077, 327680, 3, 196613, 262144, 4, 262149, 262144, 4, 327685, 262144, 4, 393221, 262144, 4, 458757, 262144, 6, 131078, 262144, 1, 196614, 327680, 3, 262150, 262144, 4, 327686, 262144, 4, 393222, 262144, 8, 458758, 196608, 4, 524294, 65536, 4, 131079, 458752, 3, 196615, 262144, 1, 262151, 262144, 4, 327687, 262144, 4, 393223, 262144, 4, 458759, 262144, 4, 524295, 262144, 6, 196616, 262144, 1, 262152, 262144, 4, 327688, 262144, 8, 393224, 262144, 4, 458760, 262144, 4, 524296, 262144, 6, 196617, 262144, 1, 262153, 327680, 3, 327689, 262144, 4, 393225, 262144, 4, 458761, 327680, 4, 524297, 458752, 4, 196618, 458752, 3, 262154, 262144, 1, 327690, 262144, 4, 393226, 327680, 4, 458762, 458752, 4, 262155, 262144, 1, 327691, 262144, 4, 393227, 262144, 6, 262156, 458752, 3, 327692, 327680, 2, 393228, 458752, 4)
@@ -316,7 +317,7 @@ sources/0 = SubResource("TileSetAtlasSource_5g16k")
 [node name="Game" type="Node2D" unique_id=1955300179]
 
 [node name="player" parent="." unique_id=1875696947 instance=ExtResource("1_5kiuu")]
-position = Vector2(9, 242)
+position = Vector2(2, 144)
 
 [node name="Mapa" type="Node2D" parent="." unique_id=499734275]
 
@@ -402,3 +403,6 @@ limit_bottom = 400
 [node name="Node2D" parent="." unique_id=995919750 instance=ExtResource("13_5g16k")]
 position = Vector2(679, 47)
 next_level = "game02"
+
+[node name="abertura" parent="." unique_id=1809306188 instance=ExtResource("14_81276")]
+position = Vector2(1, 145)
