@@ -1,4 +1,4 @@
-![Banner do Projeto](docs/media/banner.png)
+<img src="docs/media/banner.png" width="100%" alt="Banner do Projeto">
 
 # 📝 Dev Log: Projeto Plataforma (Godot)
 
@@ -27,12 +27,12 @@ Apesar de não focar na publicação por agora, o projeto será feito com total 
 * [Dia 5: Pouco Tempo, Nova Cena e Água Animada](#-dia-5-pouco-tempo-nova-cena-e-água-animada)
 * [Dia 6: Suporte a Controles, Background Animado e a Batalha do Parallax](#-dia-6-suporte-a-controles-background-animado-e-a-batalha-do-parallax)
 * [Dia 7: Câmera Desacoplada, Portais e Transição de Fases](#-dia-7-câmera-desacoplada-portais-e-transição-de-fases)
-* [Tecnologias e Ferramentas](#%EF%B8%8F-tecnologias-e-ferramentas)
 * [Dia 8: Transição de Fases Totalmente Funcional](#-dia-8-transição-de-fases-totalmente-funcional)
+* [Tecnologias e Ferramentas](#%EF%B8%8F-tecnologias-e-ferramentas)
 
 ---
 
-🦖 Dia 1: O Ponto de Partida (O Incidente "Morphossaur")
+## 🦖 Dia 1: O Ponto de Partida (O Incidente "Morphossaur")
 
 O projeto começou no dia 5 de setembro de 2026 com a ideia inicial de criar um endless runner com dinossauros (estilo o jogo do dinossauros do Google Chrome). Cheguei a estruturar conceitos visuais e sprites iniciais para esse projeto (que se chama provisoriamente de Morphossaur e continua vivo, voltando à ativa assim que este jogo de plataforma for concluído).
 
@@ -46,11 +46,11 @@ Como o curso que estou seguindo aborda o desenvolvimento de jogos de plataforma,
 * Implementação do player temporário (ainda um dinossauro) com estados de animação para Static, Walking e Jumping.
 
 ### 📸 Mídia do Dia 1
-* **Concepts do dino:** ![DINO Concepts](docs/media/imagem_dino.png)
+<img src="docs/media/imagem_dino.png" width="100%" alt="DINO Concepts">
 
 ---
 
-🎥 Dia 2: A Chegada de Bob e a Exploração de Câmera
+## 🎥 Dia 2: A Chegada de Bob e a Exploração de Câmera
 
 O segundo dia foi de "pouco avanço" estrutural devido à mudança de direção. Para não gastar os sprites dos dinossauros e acabar criando algo reciclado, decidi trazer um personagem de outro projeto futuro do JAM labs: o Bob.
 
@@ -64,13 +64,17 @@ Ainda assim, criei os sprites de Standing, Walking e Jumping para ele (que ficar
 * Implementação do sistema de câmera centralizada com efeito smooth.
 
 ### 📸 Mídia do Dia 2
-* **Concepts do Bob:** ![Bob Concepts](docs/media/bob_concepts.png)
-* **Spritesheet do Bob:** ![Bob Sprites](docs/media/bob_sprites.png)
-* **Gameplay com o Bob:** ![Bob Sprites](docs/media/bob_GP.png)
+<table>
+  <tr>
+    <td width="33%"><img src="docs/media/bob_concepts.png" width="100%" alt="Bob Concepts"><br><sub>Concepts do Bob</sub></td>
+    <td width="33%"><img src="docs/media/bob_sprites.png" width="100%" alt="Bob Sprites"><br><sub>Spritesheet do Bob</sub></td>
+    <td width="33%"><img src="docs/media/bob_GP.png" width="100%" alt="Gameplay Bob"><br><sub>Gameplay com o Bob</sub></td>
+  </tr>
+</table>
 
 ---
 
-🐹 Dia 3: O Hamster na Bola, o Nascimento do "Blob" e Texturas
+## 🐹 Dia 3: O Hamster na Bola, o Nascimento do "Blob" e Texturas
 
 No terceiro dia, pensei em mudar de rota novamente: imaginei um jogo sobre um hamster fugindo de casa em sua bola, focando em momentum e alta velocidade usando o terreno. Novamente, vi que o escopo e a criação de sprites fugiam da minha capacidade técnica atual.
 
@@ -83,12 +87,16 @@ Explorando minha galeria de concepts antigos (inclusive ideias descartadas duran
 * Primeira aplicação de texturas no mapa.
 
 ### 📸 Mídia do Dia 3
-* **Sprites do novo personagem (Blob):** ![Blob Sprites](docs/media/blob_sprites.png)
-* **Primeira versão do terreno de testes:** ![Blob Sprites](docs/media/betaterrainV1.png)
+<table>
+  <tr>
+    <td width="50%"><img src="docs/media/blob_sprites.png" width="100%" alt="Blob Sprites"><br><sub>Sprites do novo personagem (Blob)</sub></td>
+    <td width="50%"><img src="docs/media/betaterrainV1.png" width="100%" alt="Terreno de Testes"><br><sub>Primeira versão do terreno de testes</sub></td>
+  </tr>
+</table>
 
 ---
 
-🌄 Dia 4: Ambientação, Camadas e o Efeito Parallax
+## 🌄 Dia 4: Ambientação, Camadas e o Efeito Parallax
 
 O quarto dia foi focado 100% em ambientação e em entender como estruturar um mapa de verdade. Percebi rápido que, para um jogo de plataforma focado em exploração (que é o caminho que quero seguir com esse projeto ainda sem nome), dividir o mapa em camadas não é só capricho, é essencial.
 
@@ -102,12 +110,16 @@ Para fechar o dia com chave de ouro, implementei um background definitivo e conf
 * Implementação de background com Parallax em múltiplas velocidades para criar sensação real de profundidade.
 
 ### 📸 Mídia do Dia 4
-* **Mapa reestruturado com camadas:** ![Mapa Reestruturado](docs/media/mapa_v2_camadas.png)
-* **Camadas de Parallax, mapa e Ambientação:** ![Parallax e Background](docs/media/parallax_ambientacao.png)
+<table>
+  <tr>
+    <td width="50%"><img src="docs/media/mapa_v2_camadas.png" width="100%" alt="Mapa Reestruturado"><br><sub>Mapa reestruturado com camadas</sub></td>
+    <td width="50%"><img src="docs/media/parallax_ambientacao.png" width="100%" alt="Parallax e Background"><br><sub>Camadas de Parallax e Ambientação</sub></td>
+  </tr>
+</table>
 
 ---
 
-🌊 Dia 5: Pouco Tempo, Nova Cena e Água Animada
+## 🌊 Dia 5: Pouco Tempo, Nova Cena e Água Animada
 
 O quinto dia acabou sendo mais enxuto por pura falta de tempo, mas ainda assim deu para aprender algo muito massa. Como o tempo de tela foi curto, o foco acabou sendo bem cirúrgico: entender como funciona a animação de tiles na Godot.
 
@@ -119,30 +131,34 @@ Comecei montando uma nova cena de testes bem rápida para não bagunçar o mapa 
 * Adição de água animada ao cenário.
 
 ### 📸 Mídia do Dia 5
-* **Nova cena de testes e Água animada:** ![Agua Animada](docs/media/agua_animada.gif)
+<img src="docs/media/agua_animada.gif" width="100%" alt="Agua Animada">
 
 ---
 
-🎮 Dia 6: Suporte a Controles, Background Animado e a Batalha do Parallax
+## 🎮 Dia 6: Suporte a Controles, Background Animado e a Batalha do Parallax
 
 No sexto dia, configurei o mapeamento de inputs para controles de console. Agora, as ações do player (que por enquanto continuam focadas no essencial: andar e pular) já respondem liso tanto no teclado quanto no controle. 
 
-Também aprendendi a fazer animação de cenário diretamente no background e montei uma nova cena para testar tudo. Por outro lado, o dia foi marcado por uma dor de cabeça que vem me perseguindo: o ajuste fino dos backgrounds. 
+Também aprendi a fazer animação de cenário diretamente no background e montei uma nova cena para testar tudo. Por outro lado, o dia foi marcado por uma dor de cabeça que vem me perseguindo: o ajuste fino dos backgrounds. 
 
 Está sendo a minha maior dificuldade no projeto. Nunca consigo acertar de primeira e deixar tudo 100% polido. Sempre que tento alinhar o BG dos três mapas criados até agora, acabo tendo que apelar para gambiarras, esticar sprites e caçar resoluções no improviso. Mesmo assim, sinto que o enquadramento ou o efeito de parallax ficam ligeiramente desalinhados. É um ponto fraco que com certeza vou precisar parar para estudar com mais calma nos próximos dias.
 
-Foco do dia:
+**Foco do dia:**
 * Implementação do suporte e mapeamento de inputs para controles de console.
 * Estudo de técnicas de animação diretamente no cenário (background).
 * Criação de uma nova cena de testes.
 
-📸 Mídia do Dia 6
-* **Novo cenário com background animado:** ![Cenário Animado](docs/media/dia6_bg_animado.gif)
-* **Teste com controle:** ![Gameplay Controle](docs/media/dia6_gameplay_controle.gif)
+### 📸 Mídia do Dia 6
+<table>
+  <tr>
+    <td width="50%"><img src="docs/media/dia6_bg_animado.gif" width="100%" alt="Cenário Animado"><br><sub>Novo cenário com background animado</sub></td>
+    <td width="50%"><img src="docs/media/dia6_gameplay_controle.gif" width="100%" alt="Gameplay Controle"><br><sub>Teste prático com controle de console</sub></td>
+  </tr>
+</table>
 
 ---
 
-🌀 Dia 7: Câmera Desacoplada, Portais e Transição de Fases
+## 🌀 Dia 7: Câmera Desacoplada, Portais e Transição de Fases
 
 O sétimo dia foi focado em refatoração e preparação de sistemas importantes para a progressão do jogo. 
 
@@ -152,31 +168,31 @@ Para resolver isso, desacoplei tudo: criei uma nova cena exclusiva para a câmer
 
 Depois, comecei a trabalhar no sistema de troca de fases. Para deixar a transição visualmente clara e intuitiva, desenhei um sprite animado no Aseprite e estruturei o portal em uma cena própria na Godot — configurando suas animações e scripts de comportamento. Aproveitei esse momento para me aprofundar em conceitos fundamentais da engine: passei a explorar melhor as tags/grupos, configurei as collision layers e collision masks com mais precisão e comecei a utilizar sinais (signals) para disparar eventos de forma limpa. Por fim, posicionei e "escondi" o portal pelos 3 mapas já criados para começar a amarrar a exploração entre as fases.
 
-Foco do dia:
+**Foco do dia:**
 * Refatoração e desacoplamento da câmera, transformando-a em uma cena/entidade independente com perseguição via script.
 * Ajustes e calibração da nova câmera nos 3 cenários existentes.
 * Criação dos sprites e animações do portal no Aseprite.
 * Estudo e aplicação de Collision Layers/Masks, tags/grupos e sinais (signals) na Godot.
 * Configuração da cena do portal e posicionamento pelos mapas para estruturar a transição entre fases.
 
-📸 Mídia do Dia 7
-* **Animação do portal no cenário:** ![Portal Animado](docs/media/dia7_portal_animado.gif)
+### 📸 Mídia do Dia 7
+<img src="docs/media/dia7_portal_animado.gif" width="100%" alt="Portal Animado">
 
 ---
 
-🚪 Dia 8: Transição de Fases Totalmente Funcional
+## 🚪 Dia 8: Transição de Fases Totalmente Funcional
 
 No oitavo dia, o tempo disponível foi curto e os avanços foram pontuais, mas o que deu para implementar é essencial para a estrutura de qualquer jogo de plataforma: o sistema de troca de fases está oficialmente funcional!
 
 Aproveitei a cena do portal criada no dia anterior e configurei a lógica para disparar a troca de mapa assim que o jogador entra na área. A solução ficou bem simples e modular: usei uma variável dinâmica exportada diretamente no nó, o que permite definir individualmente para qual fase o portal vai levar sem precisar criar um script diferente para cada cenário. É uma mecânica muito interessante, direta ao ponto e que já abriu minha mente para novas ideias de como estruturar a progressão de fases de um jeito ainda mais criativo no *Morphossaur*.
 
-Foco do dia:
+**Foco do dia:**
 * Implementação da lógica de transição entre cenas ao colidir com o portal.
 * Uso de variáveis dinâmicas exportadas no Inspector para tornar o portal reutilizável em qualquer fase.
 * Validação do fluxo de navegação entre os mapas do projeto.
 
-📸 Mídia do Dia 8
-* **Transição entre fases em tempo real:** ![Transição de Fases](docs/media/dia8_troca_fases.gif)
+### 📸 Mídia do Dia 8
+<img src="docs/media/dia8_troca_fases.gif" width="100%" alt="Transição de Fases">
 
 ---
 
