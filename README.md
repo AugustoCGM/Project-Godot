@@ -216,7 +216,7 @@ O resultado deixou a entrada nas fases bem mais fluida
 * Busca e validação dinâmica de nós na cena via Grupos/Tags (`"Player"`).
 * Tratamento de exceções e erros no console caso o player não seja encontrado.
 
-### 📸 Mídia do Dia 
+### 📸 Mídia do Dia 9
 <img src="docs/media/dia9_animacao_spawn.gif" width="100%" alt="Animação de Entrada do Player"> 
 
 ---
