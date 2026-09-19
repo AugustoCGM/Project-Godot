@@ -143,8 +143,8 @@ shape = SubResource("RectangleShape2D_db2vd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1272507710]
 texture_filter = 1
-position = Vector2(0, 1)
+position = Vector2(0, 4)
 sprite_frames = SubResource("SpriteFrames_ky1m6")
-animation = &"crouch"
+animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.84474
+frame_progress = 0.6542632

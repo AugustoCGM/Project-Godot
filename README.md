@@ -30,6 +30,7 @@ Apesar de não focar na publicação por agora, o projeto será feito com total 
 * [Dia 8: Transição de Fases Totalmente Funcional](#-dia-8-transição-de-fases-totalmente-funcional)
 * [Dia 9: Polimento Visual e Animação de Spawn do Jogador](#-dia-9-polimento-visual-e-animação-de-spawn-do-jogador)
 * [Tecnologias e Ferramentas](#%EF%B8%8F-tecnologias-e-ferramentas)
+* [Dia 10: Refatoração da Máquina de Estados e Novas Movimentações](#-dia-10-refatoração-da-máquina-de-estados-e-novas-movimentações)
 
 ---
 
@@ -218,6 +219,26 @@ O resultado deixou a entrada nas fases bem mais fluida
 
 ### 📸 Mídia do Dia 9
 <img src="docs/media/dia9_animacao_spawn.gif" width="100%" alt="Animação de Entrada do Player"> 
+
+---
+
+🧘 Dia 10: Refatoração da Máquina de Estados e Novas Movimentações
+
+No décimo dia, o foco foi reestruturar a arquitetura do jogador para dar um salto na jogabilidade. O script antigo do player estava começando a ficar engessado, então fiz uma refatoração completa aplicando o conceito de **Máquina de Estados (Finite State Machine)** baseada em enums.
+
+Com essa nova estrutura modular, o código ficou infinitamente mais limpo, desacoplado e fácil de expandir. Além dos estados clássicos de parada (*idle*), caminhada (*walk*) e pulo (*jump*), adicionei e configurei três novas mecânicas de movimentação:
+
+1. **Agachar (*crouch*):** O personagem reduz sua hitbox ao se abaixar.
+2. **Rolar (*roll*):** Ao mover o personagem enquanto estiver agachado, ele executa uma rolagem rápida com velocidade um pouco aumentada.
+3. **Pulo Duplo (*double jump*):** Agora o jogador pode executar um segundo pulo no ar antes de tocar o solo. Para dar um charme visual, o segundo pulo substitui a animação padrão por um giro no ar!
+
+**Foco do dia:**
+* Reestruturação completa do script do player usando enums e máquina de estados (`idle`, `walk`, `jump`, `crouch`, `roll`)
+* Implementação das mecânicas de agachar, rolar com impulso de velocidade e pulo duplo.
+* Feedback visual dinâmico no ar: troca de animação para giro/roll durante o pulo duplo e controle do estado de queda.
+
+### 📸 Mídia do Dia 10
+<img src="docs/media/dia10_novas_movimentacoes.gif" width="100%" alt="Demonstração das novas movimentações do Player">
 
 ---
 
