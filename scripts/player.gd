@@ -1,12 +1,87 @@
 extends CharacterBody2D
-@onready var ani: AnimatedSprite2D = $AnimatedSprite2D
 
+enum PlayerState{
+	idle,
+	walk,
+	jump
+}
+
+@onready var ani: AnimatedSprite2D = $AnimatedSprite2D
 
 const SPEED = 160.0
 const JUMP_VELOCITY = -300.0
 
+var status: PlayerState
 
 func _physics_process(delta: float) -> void:
+	
+	match status:
+		PlayerState.idle:
+			idle_state()
+		PlayerState.walk:
+			walk_state()
+		PlayerState.jump:
+			jump_state()
+
+
+func go_to_idle_state():
+	status = PlayerState.idle
+	ani.play("idle")
+
+func go_to_walk_state():
+	status = PlayerState.walk
+	ani.play("walk")
+func go_to_jump_state():
+	status = PlayerState.jump
+	ani.play("jump")
+
+func idle_state():
+	pass
+
+func walk_state():
+	pass
+
+func jump_state():
+	pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+func temp(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
