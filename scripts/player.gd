@@ -13,8 +13,14 @@ const JUMP_VELOCITY = -300.0
 
 var status: PlayerState
 
+func _ready() -> void:
+	go_to_idle_state()
+
 func _physics_process(delta: float) -> void:
-	
+
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
 	match status:
 		PlayerState.idle:
 			idle_state()
@@ -22,6 +28,8 @@ func _physics_process(delta: float) -> void:
 			walk_state()
 		PlayerState.jump:
 			jump_state()
+
+	move_and_slide()
 
 
 func go_to_idle_state():
@@ -36,13 +44,22 @@ func go_to_jump_state():
 	ani.play("jump")
 
 func idle_state():
-	pass
+	move()
 
 func walk_state():
-	pass
+	move()
 
 func jump_state():
-	pass
+	move()
+
+
+
+func move():
+	var direction := Input.get_axis("left", "right")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 
 
