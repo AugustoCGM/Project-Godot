@@ -13,7 +13,7 @@ enum PlayerState {
 
 const SPEED = 160.0
 const CROUCH_SPEED = 80.0 
-const ROLL_SPEED = 220.0  
+const ROLL_SPEED = 300.0  
 const JUMP_VELOCITY = -300.0
 
 var status: PlayerState
