@@ -242,6 +242,25 @@ Com essa nova estrutura modular, o código ficou infinitamente mais limpo, desac
 
 ---
 
+## 🚀 Dia 11: Boost, Dive e a Câmera (Silenciosamente) Barulhenta
+
+Me diverti tanto implementando a máquina de estados no dia anterior que resolvi brincar um pouco mais com a estrutura. Aproveitei a flexibilidade do código novo para adicionar dois novos estados de movimentação que dão muito mais dinâmica e velocidade para a gameplay: o **Boost** e o **Dive**.
+
+O *Boost* é um impulso ativado ao manter o botão de pulo pressionado no exato momento em que o player encosta no chão após um pulo duplo. Já o *Dive* é um mergulho rápido e agressivo em direção ao solo, ativado se eu pressionar o botão de agachar enquanto estou no meio de um pulo duplo.
+
+Para dar peso (*game feel*) a essas ações, adicionei uma dinâmica na câmera: ela sofre um *screen shake* (tremor) toda vez que o player inicia um *Boost* ou impacta o chão após um *Dive*. O único problema é que eu exagerei tanto no efeito que vou dormir com o ouvido doendo por conta do "estrondo" altíssimo que a câmera faz quando treme... detalhe: o jogo ainda não tem efeito sonoro😐 ! (O poder psicológico do feedback visual é real).
+
+**Foco do dia:**
+* Expansão da Máquina de Estados com duas novas mecânicas avançadas: Boost e Dive.
+* Lógica de inputs combinados e janelas de ação (ativar comandos específicos logo após o pulo duplo).
+* Implementação de *Screen Shake* na câmera para melhorar o *game feel* e o peso dos impactos.
+
+### 📸 Mídia do Dia 11
+<img src="docs/media/dia11_boost_dive.gif" width="100%" alt="Boost, Dive e Screen Shake na Câmera">
+
+---
+
+
 ## 🛠️ Tecnologias e Ferramentas
 * **Engine:** Godot Engine
 * **Arte / Animação:** Aseprite
