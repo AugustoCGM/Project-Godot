@@ -14,13 +14,18 @@ enum PlayerState {
 @onready var ani: AnimatedSprite2D = $AnimatedSprite2D
 @onready var colision_shape: CollisionShape2D = $CollisionShape2D
 
+# Constantes de Movimento Base
 const SPEED = 160.0
 const CROUCH_SPEED = 80.0 
 const ROLL_SPEED = 300.0  
 const JUMP_VELOCITY = -300.0
+
+# Constantes de Habilidades e Combate
 const DIVE_VELOCITY = 600.0   
 const BOOST_SPEED = 600.0     
 const BOOST_DURATION = 0.4    
+const SUPER_JUMP_VELOCITY = -500.0 
+const KNOCKBACK_FORCE = Vector2(100.0, -200.0) # X = Força horizontal, Y = Altura do pulo de dano
 
 var status: PlayerState
 var has_double_jumped: bool = false
@@ -116,16 +121,21 @@ func go_to_boost_state():
 	ani.play("roll")
 	boost_timer = BOOST_DURATION 
 	
-	# Aplica a explosão máxima de velocidade no frame 0 do impulso
 	var dir = -1 if ani.flip_h else 1
 	velocity.x = dir * BOOST_SPEED
 	
-	# Tremor suavizado
 	trigger_camera_shake(3.5, 6.0)
-	
+
 func go_to_dead_state():
 	status = PlayerState.dead
 	ani.play("dead")
+	
+	trigger_camera_shake(3.5, 6.0)
+	
+	# Direção inversa para o Knockback
+	var dir = 1 if ani.flip_h else -1
+	velocity.x = dir * KNOCKBACK_FORCE.x
+	velocity.y = KNOCKBACK_FORCE.y
 
 # ==========================================
 # MÓDULO: COMPORTAMENTOS POR ESTADO
@@ -239,19 +249,17 @@ func dive_state():
 	velocity.y = DIVE_VELOCITY
 	
 	if is_on_floor():
-		# Impacto severo reduzido à metade para maior conforto visual
-		trigger_camera_shake(3.5, 5.0)
+		trigger_camera_shake(3.5, 6.0)
+		velocity.y = SUPER_JUMP_VELOCITY
 		has_double_jumped = false 
-		go_to_idle_state()
+		go_to_jump_state()
 
 func boost_state(delta: float):
 	boost_timer -= delta
 	
-	# Determina o vetor alvo (velocidade normal de movimento)
 	var dir = -1 if ani.flip_h else 1
 	var target_speed = dir * SPEED
 	
-	# Desacelera do BOOST_SPEED até o SPEED normal a uma taxa de 500 pixels por segundo
 	velocity.x = move_toward(velocity.x, target_speed, 500.0 * delta)
 
 	if Input.is_action_just_pressed("jump"):
@@ -265,21 +273,14 @@ func boost_state(delta: float):
 		elif Input.get_axis("left", "right") != 0:
 			go_to_walk_state() 
 		else:
-			go_to_idle_state()
-
-	if boost_timer <= 0:
-		if not is_on_floor():
-			go_to_jump_state() 
-		elif Input.get_axis("left", "right") != 0:
-			go_to_walk_state() 
-		else:
 			go_to_idle_state() 
 
-func dead_state(_delta):
-	pass
+func dead_state(delta: float):
+	if is_on_floor():
+		velocity.x = move_toward(velocity.x, 0, SPEED * 2 * delta)
 
 # ==========================================
-# MÓDULO: FUNÇÕES AUXILIARES
+# MÓDULO: FUNÇÕES AUXILIARES E SINAIS
 # ==========================================
 
 func update_facing(direction: float):
@@ -288,10 +289,23 @@ func update_facing(direction: float):
 	elif direction < 0:
 		ani.flip_h = true
 
-
 func _on_hitbox_area_entered(area: Area2D) -> void:
-	if velocity.y > 0:
-	 	#inimigo morre
-		area.get_parent().queue_free()
-	else:
-		go_to_dead_state()
+	match status:
+		PlayerState.boost:
+			area.get_parent().queue_free()
+			trigger_camera_shake(4.0, 5.0) 
+			
+		PlayerState.dive:
+			area.get_parent().queue_free()
+			trigger_camera_shake(5.0, 5.0)
+			velocity.y = JUMP_VELOCITY
+			has_double_jumped = false
+			go_to_jump_state()
+			
+		_:
+			if velocity.y > 0:
+				velocity.y = JUMP_VELOCITY
+				has_double_jumped = false
+				go_to_jump_state()
+			else:
+				go_to_dead_state()
