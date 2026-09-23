@@ -309,3 +309,6 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 				go_to_jump_state()
 			else:
 				go_to_dead_state()
+				
+				
+				
