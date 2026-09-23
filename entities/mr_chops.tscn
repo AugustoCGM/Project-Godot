@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b1smd3tppew1v"]
 
+[ext_resource type="Script" uid="uid://c0l6rlc1gtnqr" path="res://scripts/mr_chops.gd" id="1_6hckj"]
 [ext_resource type="Texture2D" uid="uid://d12r6esdeuvaa" path="res://sprites/6 - Mr. Chomps/Eye_Blink_(Replace last frame on Crawling)_(32 x 32).png" id="1_it8ro"]
 [ext_resource type="Texture2D" uid="uid://bvbpbhhvni4xo" path="res://sprites/6 - Mr. Chomps/Crawling_(32 x 32).png" id="2_6hckj"]
 [ext_resource type="Texture2D" uid="uid://s778duyxo1m3" path="res://sprites/6 - Mr. Chomps/Crawl_&_Blink_(32 x 32).png" id="3_p5mk2"]
@@ -119,12 +120,13 @@ animations = [{
 size = Vector2(29, 11)
 
 [node name="mr_chops" type="CharacterBody2D" unique_id=1961601455]
+script = ExtResource("1_6hckj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=115549498]
 sprite_frames = SubResource("SpriteFrames_ky1m6")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.9670301
+frame_progress = 0.76188385
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1258426051]
 position = Vector2(-0.5, 9.5)
