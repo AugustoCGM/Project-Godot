@@ -120,13 +120,14 @@ animations = [{
 size = Vector2(29, 11)
 
 [node name="mr_chops" type="CharacterBody2D" unique_id=1961601455]
+collision_layer = 8
 script = ExtResource("1_6hckj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=115549498]
 sprite_frames = SubResource("SpriteFrames_ky1m6")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.76188385
+frame_progress = 0.41991526
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1258426051]
 position = Vector2(-0.5, 9.5)
