@@ -260,6 +260,34 @@ Para dar peso (*game feel*) a essas ações, adicionei uma dinâmica na câmera:
 
 ---
 
+## 🐊 Dia 12: Primeiros Inimigos, Jacarés e Interações de Combate
+
+Os primeiros testes com inimigos começaram! Adicionei uma nova entidade ao projeto: um jacaré. Por enquanto, ele ainda não possui inteligência artificial para agir sozinho, mas já deixei toda a base visual preparada, com as animações de *idle*, *andar* e *ataque* devidamente configuradas.
+
+Também organizei o projeto adicionando uma camada (layer) exclusiva de colisão para os inimigos e comecei a programar as interações diretamente no script do player. 
+
+A interação entre o player e o inimigo acontece de forma bem dinâmica:
+* Se o player atingir o jacaré usando as habilidades de `boost` ou `dive`, o inimigo é destruído (`queue_free()`) e a tela sofre um *camera shake* para dar peso ao impacto.
+* Caso o player apenas caia sobre o inimigo, ele ganha um impulso vertical, recarregando o pulo.
+* Se o player encostar no inimigo sem estar atacando ou caindo, ele transita para o novo estado de morte (`PlayerState.dead`).
+* O estado de morte (`dead_state`) reproduz a animação de morte, treme a câmera e aplica uma força de repulsão diagonal (*knockback*) baseada na constante `KNOCKBACK_FORCE`.
+
+**Foco do dia:**
+* Criação da entidade do jacaré com sprites e animações base.
+* Configuração da *Collision Layer* específica para Inimigos.
+* Expansão da máquina de estados do player adicionando o estado `dead`.
+* Implementação de interações de combate onde o resultado depende da movimentação atual do player (Boost/Dive/Falling vs. Dano).
+
+### 📸 Mídia do Dia 12
+<table>
+  <tr>
+    <td width="50%"><img src="docs/media/dia12_derrotando.gif" width="100%" alt="Player derrotando o jacaré"><br><sub>Player atacando com Boost/Dive</sub></td>
+    <td width="50%"><img src="docs/media/dia12_derrotado.gif" width="100%" alt="Player sendo derrotado"><br><sub>Player recebendo dano e Knockback</sub></td>
+  </tr>
+</table>
+
+---
+
 
 ## 🛠️ Tecnologias e Ferramentas
 * **Engine:** Godot Engine
