@@ -7,7 +7,8 @@ enum PlayerState {
 	crouch,
 	roll,
 	dive,   
-	boost   
+	boost,
+	dead   
 }
 
 @onready var ani: AnimatedSprite2D = $AnimatedSprite2D
@@ -52,6 +53,8 @@ func _physics_process(delta: float) -> void:
 			dive_state()
 		PlayerState.boost:
 			boost_state(delta) 
+		PlayerState.dead:
+			dead_state(delta)
 
 	move_and_slide()
 
@@ -119,6 +122,10 @@ func go_to_boost_state():
 	
 	# Tremor suavizado
 	trigger_camera_shake(3.5, 6.0)
+	
+func go_to_dead_state():
+	status = PlayerState.dead
+	ani.play("dead")
 
 # ==========================================
 # MÓDULO: COMPORTAMENTOS POR ESTADO
@@ -268,6 +275,9 @@ func boost_state(delta: float):
 		else:
 			go_to_idle_state() 
 
+func dead_state(_delta):
+	pass
+
 # ==========================================
 # MÓDULO: FUNÇÕES AUXILIARES
 # ==========================================
@@ -277,3 +287,11 @@ func update_facing(direction: float):
 		ani.flip_h = false
 	elif direction < 0:
 		ani.flip_h = true
+
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	if velocity.y > 0:
+	 	#inimigo morre
+		area.get_parent().queue_free()
+	else:
+		go_to_dead_state()

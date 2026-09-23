@@ -10,6 +10,22 @@ size = Vector2(12, 15)
 atlas = ExtResource("2_b0kkn")
 region = Rect2(175, 0, 25, 21)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0kkn"]
+atlas = ExtResource("2_b0kkn")
+region = Rect2(350, 0, 25, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rie4"]
+atlas = ExtResource("2_b0kkn")
+region = Rect2(375, 0, 25, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dp3pk"]
+atlas = ExtResource("2_b0kkn")
+region = Rect2(400, 0, 25, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgp7q"]
+atlas = ExtResource("2_b0kkn")
+region = Rect2(425, 0, 25, 21)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_rfe5m"]
 atlas = ExtResource("2_b0kkn")
 region = Rect2(150, 0, 25, 21)
@@ -71,6 +87,23 @@ animations = [{
 "loop": 1,
 "name": &"crouch",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_b0kkn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rie4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dp3pk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgp7q")
+}],
+"loop": 0,
+"name": &"dead",
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -159,8 +192,10 @@ shape = SubResource("RectangleShape2D_db2vd")
 texture_filter = 1
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_ky1m6")
-animation = &"hurt"
+animation = &"dead"
 autoplay = "idle"
+frame = 3
+frame_progress = 1.0
 
 [node name="hitbox" type="Area2D" parent="." unique_id=597791607]
 
@@ -168,3 +203,5 @@ autoplay = "idle"
 position = Vector2(-2, 2)
 shape = SubResource("RectangleShape2D_ky1m6")
 debug_color = Color(0.56145567, 0.5598257, 0, 0.41960785)
+
+[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
