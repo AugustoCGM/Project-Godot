@@ -473,4 +473,4 @@ next_level = "game02"
 position = Vector2(1, 145)
 
 [node name="mr_chops" parent="." unique_id=1961601455 instance=ExtResource("15_ve786")]
-position = Vector2(257, 208)
+position = Vector2(191, 209)

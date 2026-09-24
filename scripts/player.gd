@@ -292,11 +292,15 @@ func update_facing(direction: float):
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	match status:
 		PlayerState.boost:
-			area.get_parent().queue_free()
+			# Substitui queue_free() pela chamada segura de dano
+			if area.get_parent().has_method("take_damage"):
+				area.get_parent().take_damage()
 			trigger_camera_shake(4.0, 5.0) 
 			
 		PlayerState.dive:
-			area.get_parent().queue_free()
+			# Substitui queue_free() pela chamada segura de dano
+			if area.get_parent().has_method("take_damage"):
+				area.get_parent().take_damage()
 			trigger_camera_shake(5.0, 5.0)
 			velocity.y = JUMP_VELOCITY
 			has_double_jumped = false
@@ -309,6 +313,3 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 				go_to_jump_state()
 			else:
 				go_to_dead_state()
-				
-				
-				
