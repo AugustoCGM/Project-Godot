@@ -288,8 +288,30 @@ A interação entre o player e o inimigo acontece de forma bem dinâmica:
 
 ---
 
+## 🐊 Dia 13: Inteligência Artificial, RayCasts e a Morte "3D" do Jaré
+
+O dia 13 foi focado em dar vida ao Jaré e em aprofundar os estudos com RayCasts, um conceito muito bacana e extremamente útil na engine. Agora, o jacaré não é apenas um sprite estático!
+
+Para dar autonomia ao inimigo, implementei uma inteligência artificial básica baseada em estados (`idle`, `walk`, `bite`, `dead`) e nós do tipo `RayCast2D`. O Jaré agora patrulha o cenário de forma inteligente: ele usa detectores para identificar paredes à frente e buracos no chão, invertendo sua direção automaticamente para não cair ou travar. Além disso, adicionei um sensor frontal para detectar o jogador; caso o player entre no seu raio de visão, o Jaré interrompe a caminhada, desloca sua *hitbox* para frente para ganhar alcance e executa a mordida.
+
+A parte mais divertida do dia foi refatorar a derrota do inimigo. Atualizei o script do player: em vez de simplesmente apagar o jacaré da existência com `queue_free()` durante um *Boost* ou *Dive*, o player agora chama a função `take_damage()` do inimigo. Isso aciona um efeito visual de arremesso "Fake 3D". O Jaré tem suas colisões desativadas, recebe um impulso caótico para o ar, e começa a girar rolando para trás enquanto sua escala aumenta progressivamente em direção à tela. Ao se aproximar da "lente da câmera", ele perde opacidade até sumir completamente e ser deletado da memória.
+
+**Foco do dia:**
+* Estudo prático e implementação de `RayCast2D` (`wall_detector`, `ground_detector`, `player_detector`) para navegação autônoma.
+* Criação de IA de patrulha e sistema de detecção e ataque focado no player.
+* Manipulação dinâmica de posição de colisão (*hitbox*) via código para sincronizar com a animação de ataque.
+* Substituição da exclusão instantânea (`queue_free()`) do inimigo por uma chamada segura de dano (`take_damage()`) no script do player.
+* Desenvolvimento de um efeito visual de morte com física simulada, rotação, ganho de escala (ilusão 3D) e desfoque (*fade out*).
+
+### 📸 Mídia do Dia 13
+<img src="docs/media/dia13_jare_ia.gif" width="100%" alt="IA do Jaré e Efeito de Morte 3D">
+
+---
+
 
 ## 🛠️ Tecnologias e Ferramentas
 * **Engine:** Godot Engine
 * **Arte / Animação:** Aseprite
 * **Organização:** JAM labs
+**Agradecimento Especial:** 
+> Um agradecimento ao professor **[Rafael Forbeck](https://github.com/RafaelForbeck)** pelas aulas e pela didática fantástica durante o curso de Godot! 
