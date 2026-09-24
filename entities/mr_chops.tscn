@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://b1smd3tppew1v"]
 
 [ext_resource type="Script" uid="uid://c0l6rlc1gtnqr" path="res://scripts/mr_chops.gd" id="1_6hckj"]
-[ext_resource type="Texture2D" uid="uid://d12r6esdeuvaa" path="res://sprites/6 - Mr. Chomps/Eye_Blink_(Replace last frame on Crawling)_(32 x 32).png" id="1_it8ro"]
-[ext_resource type="Texture2D" uid="uid://bvbpbhhvni4xo" path="res://sprites/6 - Mr. Chomps/Crawling_(32 x 32).png" id="2_6hckj"]
 [ext_resource type="Texture2D" uid="uid://bmn03h6owjoiw" path="res://sprites/6 - Mr. Chomps/Crawl_&_Chomp_(32 x 32).png" id="2_bowcj"]
 [ext_resource type="Texture2D" uid="uid://bd6t723avyg8l" path="res://sprites/6 - Mr. Chomps/Hurt_(32 x 32).png" id="3_4jeks"]
 [ext_resource type="Texture2D" uid="uid://s778duyxo1m3" path="res://sprites/6 - Mr. Chomps/Crawl_&_Blink_(32 x 32).png" id="3_p5mk2"]
+[ext_resource type="Texture2D" uid="uid://70llxvq6llnf" path="res://sprites/6 - Mr. Chomps/Hurt_(32 x 32)-sheet.png" id="4_bowcj"]
+[ext_resource type="Texture2D" uid="uid://cndn2ql1tiark" path="res://sprites/6 - Mr. Chomps/idle3.png" id="5_4jeks"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lsh1n"]
 atlas = ExtResource("2_bowcj")
@@ -35,13 +35,21 @@ region = Rect2(160, 0, 32, 32)
 atlas = ExtResource("3_4jeks")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bowcj"]
-atlas = ExtResource("1_it8ro")
+[sub_resource type="AtlasTexture" id="AtlasTexture_tr4pj"]
+atlas = ExtResource("4_bowcj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rk2me"]
+atlas = ExtResource("5_4jeks")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4jeks"]
-atlas = ExtResource("2_6hckj")
-region = Rect2(160, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdrpq"]
+atlas = ExtResource("5_4jeks")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ov3id"]
+atlas = ExtResource("5_4jeks")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p1wit"]
 atlas = ExtResource("3_p5mk2")
@@ -119,21 +127,36 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_quua4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tr4pj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_quua4")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"hurt",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bowcj")
+"texture": SubResource("AtlasTexture_rk2me")
 }, {
-"duration": 15.0,
-"texture": SubResource("AtlasTexture_4jeks")
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdrpq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rk2me")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdrpq")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_ov3id")
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -189,9 +212,10 @@ script = ExtResource("1_6hckj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=115549498]
 sprite_frames = SubResource("SpriteFrames_ky1m6")
-animation = &"bite"
+animation = &"hurt"
 autoplay = "idle"
-frame_progress = 0.25920087
+frame = 2
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1258426051]
 position = Vector2(-0.5, 9.5)
