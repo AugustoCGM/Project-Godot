@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://chotr1c56af2i" path="res://entities/camera.tscn" id="11_va4de"]
 [ext_resource type="PackedScene" uid="uid://cim73km7binsa" path="res://entities/portal.tscn" id="12_e0amn"]
 [ext_resource type="PackedScene" uid="uid://u4luxpdw0ntp" path="res://entities/abertura.tscn" id="13_u2dl8"]
+[ext_resource type="PackedScene" uid="uid://nchmmakkiamf" path="res://entities/mosquito.tscn" id="14_3b6if"]
 [ext_resource type="PackedScene" uid="uid://b1smd3tppew1v" path="res://entities/mr_chops.tscn" id="14_bgw7l"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_ya5ci"]
@@ -291,23 +292,70 @@ next_level = "game"
 [node name="Area2D" parent="." unique_id=1809306188 instance=ExtResource("13_u2dl8")]
 position = Vector2(28, 215)
 
-[node name="mr_chops" parent="." unique_id=1961601455 instance=ExtResource("14_bgw7l")]
-position = Vector2(98, 272)
+[node name="enemies" type="Node2D" parent="." unique_id=1553603951]
 
-[node name="mr_chops2" parent="." unique_id=101633322 instance=ExtResource("14_bgw7l")]
-position = Vector2(134, 272)
+[node name="CharacterBody2D" parent="enemies" unique_id=699594034 instance=ExtResource("14_3b6if")]
+position = Vector2(402, 262)
+can_move = false
+can_respawn = true
 
-[node name="mr_chops3" parent="." unique_id=2053975990 instance=ExtResource("14_bgw7l")]
-position = Vector2(171, 272)
+[node name="CharacterBody2D2" parent="enemies" unique_id=1522955016 instance=ExtResource("14_3b6if")]
+position = Vector2(384, 86)
+can_move = false
+can_respawn = true
+respawn_time = 0.1
 
-[node name="mr_chops4" parent="." unique_id=1344736305 instance=ExtResource("14_bgw7l")]
-position = Vector2(213, 272)
+[node name="CharacterBody2D3" parent="enemies" unique_id=292179059 instance=ExtResource("14_3b6if")]
+position = Vector2(453, 55)
+patrol_distance = 5.0
+can_respawn = true
 
-[node name="mr_chops5" parent="." unique_id=1621857009 instance=ExtResource("14_bgw7l")]
-position = Vector2(254, 272)
+[node name="CharacterBody2D4" parent="enemies" unique_id=1310802883 instance=ExtResource("14_3b6if")]
+position = Vector2(520, 96)
+can_move = false
+can_respawn = true
 
-[node name="mr_chops6" parent="." unique_id=1797491087 instance=ExtResource("14_bgw7l")]
-position = Vector2(293, 272)
+[node name="CharacterBody2D5" parent="enemies" unique_id=534983575 instance=ExtResource("14_3b6if")]
+position = Vector2(586, 61)
+can_move = false
+can_respawn = true
 
-[node name="mr_chops7" parent="." unique_id=988041607 instance=ExtResource("14_bgw7l")]
-position = Vector2(334, 272)
+[node name="CharacterBody2D6" parent="enemies" unique_id=157569797 instance=ExtResource("14_3b6if")]
+position = Vector2(86, 276)
+can_move = false
+
+[node name="mr_chops" parent="enemies" unique_id=1961601455 instance=ExtResource("14_bgw7l")]
+position = Vector2(115, 272)
+can_move = false
+
+[node name="CharacterBody2D7" parent="enemies" unique_id=115538143 instance=ExtResource("14_3b6if")]
+position = Vector2(145, 276)
+can_move = false
+
+[node name="mr_chops2" parent="enemies" unique_id=599628387 instance=ExtResource("14_bgw7l")]
+position = Vector2(172, 272)
+can_move = false
+
+[node name="CharacterBody2D8" parent="enemies" unique_id=1050286400 instance=ExtResource("14_3b6if")]
+position = Vector2(512, -13)
+can_move = false
+
+[node name="CharacterBody2D9" parent="enemies" unique_id=1547503436 instance=ExtResource("14_3b6if")]
+position = Vector2(403, -45)
+can_move = false
+
+[node name="CharacterBody2D10" parent="enemies" unique_id=1680465275 instance=ExtResource("14_3b6if")]
+position = Vector2(130, 208)
+can_move = false
+
+[node name="CharacterBody2D11" parent="enemies" unique_id=1147124704 instance=ExtResource("14_3b6if")]
+position = Vector2(76, 156)
+can_move = false
+
+[node name="CharacterBody2D12" parent="enemies" unique_id=717339104 instance=ExtResource("14_3b6if")]
+position = Vector2(134, 86)
+can_move = false
+
+[node name="CharacterBody2D13" parent="enemies" unique_id=834584817 instance=ExtResource("14_3b6if")]
+position = Vector2(176, 5)
+can_move = false

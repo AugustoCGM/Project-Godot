@@ -779,3 +779,9 @@ z_index = -4
 position = Vector2(289, 224)
 script = SubResource("GDScript_i6gbm")
 can_move = false
+
+[node name="CharacterBody2D3" parent="." unique_id=39236781 instance=ExtResource("17_i6gbm")]
+position = Vector2(607, 124)
+can_move = false
+can_respawn = true
+respawn_time = 2.0
