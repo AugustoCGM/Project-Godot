@@ -31,6 +31,10 @@ Apesar de não focar na publicação por agora, o projeto será feito com total 
 * [Dia 9: Polimento Visual e Animação de Spawn do Jogador](#-dia-9-polimento-visual-e-animação-de-spawn-do-jogador)
 * [Tecnologias e Ferramentas](#%EF%B8%8F-tecnologias-e-ferramentas)
 * [Dia 10: Refatoração da Máquina de Estados e Novas Movimentações](#-dia-10-refatoração-da-máquina-de-estados-e-novas-movimentações)
+* [Dia 11: Boost, Dive e a Câmera (Silenciosamente) Barulhenta](#-dia-11-boost-dive-e-a-câmera-silenciosamente-barulhenta)
+* [Dia 12: Primeiros Inimigos, Jacarés e Interações de Combate](#-dia-12-primeiros-inimigos-jacarés-e-interações-de-combate)
+* [Dia 13: Inteligência Artificial, RayCasts e a Morte "3D" do Jaré](#-dia-13-inteligência-artificial-raycasts-e-a-morte-3d-do-jaré)
+* [Dia 14: Novo Inimigo Voador (Mosquito), Controle de Patrulha e Respawn](#-dia-14-novo-inimigo-voador-mosquito-controle-de-patrulha-e-respawn)
 
 ---
 
@@ -308,6 +312,27 @@ A parte mais divertida do dia foi refatorar a derrota do inimigo. Atualizei o sc
 
 ---
 
+## 🦟 Dia 14: Novo Inimigo Voador (Mosquito), Controle de Patrulha e Respawn
+
+No décimo quarto dia, o foco foi aprimorar o comportamento dos inimigos para atender às necessidades de level design e exploração do jogo. Além do Jacaré, introduzi uma nova ameaça nos céus: **um mosquito voador**, expandindo os desafios e a variação de movimentação vertical do mapa.
+
+Como os inimigos no jogo não servem apenas como obstáculos, mas também como elementos de plataforma (onde o jogador pode pular sobre eles para se impulsionar e alcançar locais mais altos), precisava de um controle muito mais preciso sobre a movimentação e o ciclo de vida de cada entidade.
+
+Para ajustar a movimentação (tanto dos terrestres quanto do mosquito), implementei variáveis exportadas (`@export`) no Inspector. Agora é possível definir se o inimigo é estático (`can_move = false`), permanecendo apenas em sua animação de *idle*/voo fixo, ou se ele patrulha o cenário. Para os que se movem, criei um sistema de limitação por raio/intervalo a partir da posição de origem, garantindo que eles não saiam vagando sem rumo e abandonem a área planejada.
+
+Por fim, estruturei o sistema de **Respawn**. Como inimigos (incluindo o novo mosquito) podem ser posicionados estrategicamente para servirem de "degrau" no ar e ajudar a alcançar plataformas elevadas, derrotá-los por engano poderia travar o progresso. Com parâmetros configuráveis (`can_respawn` e `respawn_time`), o inimigo derrotado entra em contagem com um `Timer` e reaparece no seu ponto de origem após o tempo determinado, tornando a exploração fluida e sem travamentos.
+
+**Foco do dia:**
+* Criação e configuração de um novo tipo de inimigo voador (mosquito).
+* Criação de parâmetros exportados (`can_move`) para alternar facilmente entre inimigos móveis e estáticos.
+* Implementação de restrição de patrulha (limites de alcance/range) a partir da posição de origem.
+* Level design focado em exploração: uso de inimigos (terrestres e voadores) como plataformas e impulso de pulo.
+* Sistema de Respawn configurável (`can_respawn` e `respawn_time`) com timers para reaparecimento de entidades no cenário.
+
+### 📸 Mídia do Dia 15
+<img src="docs/media/dia15_patrulha_respawn.gif" width="100%" alt="Inimigo voador mosquito, patrulha e sistema de respawn">
+
+---
 
 ## 🛠️ Tecnologias e Ferramentas
 * **Engine:** Godot Engine
