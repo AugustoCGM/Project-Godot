@@ -2,14 +2,39 @@
 
 [ext_resource type="Script" uid="uid://ct02bt4wlylu4" path="res://scripts/player.gd" id="1_merdl"]
 [ext_resource type="Texture2D" uid="uid://b1vqph24qwbkx" path="res://sprites/black blob/completo.png" id="2_b0kkn"]
+[ext_resource type="Texture2D" uid="uid://d1v2v8jsmuph3" path="res://sprites/black blob/crouch.png" id="2_rfe5m"]
 [ext_resource type="Texture2D" uid="uid://cv1ghiht63ngt" path="res://sprites/black blob/completo2.png" id="3_e4p34"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_db2vd"]
 size = Vector2(12, 17)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e4p34"]
-atlas = ExtResource("2_b0kkn")
-region = Rect2(175, 0, 25, 21)
+[sub_resource type="AtlasTexture" id="AtlasTexture_cicqb"]
+atlas = ExtResource("2_rfe5m")
+region = Rect2(0, 0, 21, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hj0ki"]
+atlas = ExtResource("2_rfe5m")
+region = Rect2(21, 0, 21, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fruft"]
+atlas = ExtResource("2_rfe5m")
+region = Rect2(42, 0, 21, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slxql"]
+atlas = ExtResource("2_rfe5m")
+region = Rect2(63, 0, 21, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evlff"]
+atlas = ExtResource("2_rfe5m")
+region = Rect2(84, 0, 21, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7db53"]
+atlas = ExtResource("2_rfe5m")
+region = Rect2(105, 0, 21, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plaij"]
+atlas = ExtResource("2_rfe5m")
+region = Rect2(126, 0, 21, 19)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b0kkn"]
 atlas = ExtResource("2_b0kkn")
@@ -90,8 +115,26 @@ region = Rect2(100, 0, 25, 21)
 [sub_resource type="SpriteFrames" id="SpriteFrames_ky1m6"]
 animations = [{
 "frames": [{
+"duration": 25.0,
+"texture": SubResource("AtlasTexture_cicqb")
+}, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e4p34")
+"texture": SubResource("AtlasTexture_hj0ki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fruft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slxql")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_evlff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7db53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plaij")
 }],
 "loop": 1,
 "name": &"crouch",
@@ -207,10 +250,9 @@ shape = SubResource("RectangleShape2D_db2vd")
 texture_filter = 1
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_ky1m6")
-animation = &"dead"
+animation = &"crouch"
 autoplay = "idle"
-frame = 5
-frame_progress = 1.0
+frame_progress = 0.19581446
 
 [node name="hitbox" type="Area2D" parent="." unique_id=597791607]
 

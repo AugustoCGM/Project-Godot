@@ -473,4 +473,15 @@ next_level = "game02"
 position = Vector2(1, 145)
 
 [node name="mr_chops" parent="." unique_id=1961601455 instance=ExtResource("15_ve786")]
-position = Vector2(191, 209)
+position = Vector2(195, 208)
+patrol_distance = 20.0
+edge_wait_time = 3.0
+can_respawn = true
+
+[node name="mr_chops2" parent="." unique_id=1577662531 instance=ExtResource("15_ve786")]
+position = Vector2(119, 193)
+can_move = false
+
+[node name="mr_chops3" parent="." unique_id=1932630254 instance=ExtResource("15_ve786")]
+position = Vector2(487, 160)
+can_move = false

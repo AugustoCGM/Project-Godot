@@ -290,17 +290,18 @@ func update_facing(direction: float):
 		ani.flip_h = true
 
 func _on_hitbox_area_entered(area: Area2D) -> void:
+	# Descobre para qual lado o player está olhando (1 para direita, -1 para esquerda)
+	var hit_dir = 1.0 if not ani.flip_h else -1.0
+
 	match status:
 		PlayerState.boost:
-			# Substitui queue_free() pela chamada segura de dano
 			if area.get_parent().has_method("take_damage"):
-				area.get_parent().take_damage()
+				area.get_parent().take_damage(hit_dir)
 			trigger_camera_shake(4.0, 5.0) 
 			
 		PlayerState.dive:
-			# Substitui queue_free() pela chamada segura de dano
 			if area.get_parent().has_method("take_damage"):
-				area.get_parent().take_damage()
+				area.get_parent().take_damage(hit_dir)
 			trigger_camera_shake(5.0, 5.0)
 			velocity.y = JUMP_VELOCITY
 			has_double_jumped = false
@@ -308,6 +309,10 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 			
 		_:
 			if velocity.y > 0:
+				# NOVO: Avisa o inimigo que ele foi pisado antes de o jogador quicar
+				if area.get_parent().has_method("take_bounce"):
+					area.get_parent().take_bounce()
+					
 				velocity.y = JUMP_VELOCITY
 				has_double_jumped = false
 				go_to_jump_state()

@@ -31,6 +31,10 @@ region = Rect2(128, 0, 32, 32)
 atlas = ExtResource("2_bowcj")
 region = Rect2(160, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bowcj"]
+atlas = ExtResource("3_4jeks")
+region = Rect2(0, 0, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_tr4pj"]
 atlas = ExtResource("4_bowcj")
 region = Rect2(32, 0, 32, 32)
@@ -102,6 +106,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_bowcj")
+}],
+"loop": 1,
+"name": &"bounced",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_tr4pj")
 }, {
 "duration": 1.0,
@@ -167,7 +179,7 @@ script = ExtResource("1_6hckj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=115549498]
 sprite_frames = SubResource("SpriteFrames_ky1m6")
-animation = &"dead"
+animation = &"bite"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1258426051]
@@ -193,5 +205,5 @@ target_position = Vector2(0, 10)
 
 [node name="PlayerDetector" type="RayCast2D" parent="RayCasts" unique_id=821125006]
 position = Vector2(-2, 12)
-target_position = Vector2(-13, 0)
+target_position = Vector2(-17, 0)
 collision_mask = 2
