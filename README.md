@@ -29,12 +29,12 @@ Apesar de não focar na publicação por agora, o projeto será feito com total 
 * [Dia 7: Câmera Desacoplada, Portais e Transição de Fases](#-dia-7-câmera-desacoplada-portais-e-transição-de-fases)
 * [Dia 8: Transição de Fases Totalmente Funcional](#-dia-8-transição-de-fases-totalmente-funcional)
 * [Dia 9: Polimento Visual e Animação de Spawn do Jogador](#-dia-9-polimento-visual-e-animação-de-spawn-do-jogador)
-* [Tecnologias e Ferramentas](#%EF%B8%8F-tecnologias-e-ferramentas)
 * [Dia 10: Refatoração da Máquina de Estados e Novas Movimentações](#-dia-10-refatoração-da-máquina-de-estados-e-novas-movimentações)
 * [Dia 11: Boost, Dive e a Câmera (Silenciosamente) Barulhenta](#-dia-11-boost-dive-e-a-câmera-silenciosamente-barulhenta)
 * [Dia 12: Primeiros Inimigos, Jacarés e Interações de Combate](#-dia-12-primeiros-inimigos-jacarés-e-interações-de-combate)
 * [Dia 13: Inteligência Artificial, RayCasts e a Morte "3D" do Jaré](#-dia-13-inteligência-artificial-raycasts-e-a-morte-3d-do-jaré)
 * [Dia 14: Novo Inimigo Voador (Mosquito), Controle de Patrulha e Respawn](#-dia-14-novo-inimigo-voador-mosquito-controle-de-patrulha-e-respawn)
+* [Tecnologias e Ferramentas](#%EF%B8%8F-tecnologias-e-ferramentas)
 
 ---
 
